@@ -34,7 +34,7 @@ def mask(image):
 # identifies which parts of the image fall in the bounds of the ball
 def filter_image(image):
 	var = cv2.cvtColor(image, cv2.COLOR_RGB2HSV)
-	lower_yellow = np.array([25,5,1])
+	lower_yellow = np.array([25,0,1])
 	upper_yellow = np.array([60,255,255])
 	yellow_mask = cv2.inRange(var, lower_yellow, upper_yellow)
 	return yellow_mask
